@@ -61,17 +61,17 @@ bool InsertList(LNode *&L, int i, DateType e, DateType a[], int n)
         printf("i值不合法！\n");
         return false;
     }
-    //j < i-1用来满足(p需要指向第i-1个结点)的条件，此时只要满足 p->next != NULL (此时p指向第i-1个结点)就可以插入，即使是第n+1个位置也可以
-    while(j < i-1 && p->next != NULL)//p需要指向第i-1个结点，才能定位第i个结点
+    // j < i-1 用来满足 p 需要指向第 i-1 个结点的条件。
+    // 允许尾部插入，因此只要 p 不为空即可继续移动。
+    while(j < i-1 && p != NULL)
     {
         j++;
-        p= p->next;
+        p = p->next;
     }
-    if(p->next == NULL)
+    if(p == NULL)
     {
         return false;
     }
-
     else
     {
         q = (LNode*)malloc(sizeof(LNode));
