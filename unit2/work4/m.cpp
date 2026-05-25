@@ -136,3 +136,5 @@ int main()
     printf("所有窗口均空闲，营业结束\n");
     return 0;
 }
+
+

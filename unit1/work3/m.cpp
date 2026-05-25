@@ -29,7 +29,7 @@ void PrintList(LNode *&L, DateType a[], int n)
     p = L->next;//因为要输出数值，所以要跳过头结点
     for(int i = 0;i < n;i++)
     {
-        printf("%d ",p->date);
+        printf("你%d ",p->date);
         p = p->next;
         if(p == NULL)
             break;
